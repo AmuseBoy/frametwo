@@ -1,0 +1,20 @@
+server:
+  port: 8003
+security:
+  basic:
+    enabled: false #关闭spring security basic认证
+spring:
+  application:
+    name: frametwo
+  datasource:
+    primary
+    url: jdbc:oracle:thin:@localhost:1521/orcl
+    driver-class-name: oracle.jdbc.OracleDriver
+    username: demo
+    password: demo
+    type: org.apache.tomcat.jdbc.pool.DataSource
+  jpa:
+    hibernate:
+      ddl-auto: none  #自动建表或更新表
+    show-sql: true
+
