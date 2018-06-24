@@ -1,7 +1,8 @@
 package com.amuse.frametwo.service.impl;
 
-import com.amuse.frametwo.common.model.User;
-import com.amuse.frametwo.dao.UserRepository;
+import com.amuse.frametwo.common.model.primary.User;
+import com.amuse.frametwo.dao.primary.UserDao;
+import com.amuse.frametwo.dao.primary.UserRepository;
 import com.amuse.frametwo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private UserDao userDao;
+
     /**
      * 获取user
      * @param id
@@ -26,5 +30,9 @@ public class UserServiceImpl implements UserService {
      */
     public User getUser(String id){
         return userRepository.findOne(id);
+    }
+
+    public User findUser(String id){
+        return userDao.findUser(id);
     }
 }

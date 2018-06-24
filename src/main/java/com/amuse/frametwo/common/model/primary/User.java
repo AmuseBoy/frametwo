@@ -1,4 +1,4 @@
-package com.amuse.frametwo.common.model;
+package com.amuse.frametwo.common.model.primary;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

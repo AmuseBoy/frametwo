@@ -1,6 +1,6 @@
 package com.amuse.frametwo.web;
 
-import com.amuse.frametwo.common.model.User;
+import com.amuse.frametwo.common.model.primary.User;
 import com.amuse.frametwo.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -40,7 +40,11 @@ public class UserController {
         return user;
     }
 
-
+    @RequestMapping(value = "/findUser",method = RequestMethod.GET)
+    @Transactional
+    public User findUser(@RequestParam String id){
+        return userService.findUser(id);
+    }
 
 
 }

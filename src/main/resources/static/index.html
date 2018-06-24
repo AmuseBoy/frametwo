@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="actionApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap</title>
+
+    <!-- Bootstrap -->
+    <link href="./js/pub/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./js/pub/jqueryui/jquery-ui.min.css" rel="stylesheet">
+    <style type="text/css">
+        .content{
+            padding: 100px 15px;
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/oper">后台交互</a></li>
+                    <li><a href="#/directive">指令</a></li>
+                    <li><a href="#/bootstrap">bootStrap</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content">
+        <ng-view></ng-view>
+    </div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="./js/pub/jquery/jquery-3.2.1.min.js"></script>
+<script src="./js/pub/jqueryui/jquery-ui.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="./js/pub/bootstrap/js/bootstrap.min.js"></script>
+<script src="./js/pub/angularjs/angular.min.js"></script>
+<script src="./js/pub/angularjs/angular-route.min.js"></script>
+<script src="./app.js"></script>
+<script src="./js/controllers/view1.ctrl.js"></script>
+<script src="./js/controllers/view2.ctrl.js"></script>
+<script src="./js/directives/directives.js"></script>
+</body>
+</html>

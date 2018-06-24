@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap</title>
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- Bootstrap -->
+    <link href="js/pub/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="js/pub/jqueryui/jquery-ui.min.css" rel="stylesheet">
+    <style type="text/css">
+        .content{
+            padding: 100px 15px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <form name="form" action="/login" method="post">
+        <div>
+            <label for="username">账号</label>
+            <input type="text" class="form-control" name="username" placeholder="账号">
+        </div>
+        <div>
+            <label for="pasword">密码</label>
+            <input type="text" class="form-control" name="password" placeholder="密码" >
+        </div>
+        <input type="submit" id="login" value="Login" class="btn-primary">
+    </form>
+
+</div>
+
+<script src="js/pub/jquery/jquery-3.2.1.min.js"></script>
+<script src="js/pub/jqueryui/jquery-ui.min.js"></script>
+<script src="js/pub/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

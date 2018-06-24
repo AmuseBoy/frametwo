@@ -2,19 +2,34 @@ server:
   port: 8003
 security:
   basic:
-    enabled: false #关闭spring security basic认证
+    enabled: true #关闭spring security basic认证
 spring:
   application:
     name: frametwo
+  thymeleaf:
+    prefix: classpath:/static/  #动态跳转路径，默认是classpath:/templates/
+    suffix: .html #默认动态跳转路径后缀  .html ,也可以 .jsp
+    mode: HTML5
   datasource:
-    primary
-    url: jdbc:oracle:thin:@localhost:1521/orcl
-    driver-class-name: oracle.jdbc.OracleDriver
-    username: demo
-    password: demo
     type: org.apache.tomcat.jdbc.pool.DataSource
+    tomcat:
+      url: jdbc:oracle:thin:@localhost:1521/orcl
+      driver-class-name: oracle.jdbc.OracleDriver
+      username: demo
+      password: demo
+      max-idle: 10
   jpa:
     hibernate:
       ddl-auto: none  #自动建表或更新表
     show-sql: true
+    database: oracle
+    #properties: #此处可配置hibernate的各种属性
+
+second:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    max-idle: 10
 

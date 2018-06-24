@@ -1,6 +1,6 @@
-package com.amuse.frametwo.dao;
+package com.amuse.frametwo.dao.primary;
 
-import com.amuse.frametwo.common.model.User;
+import com.amuse.frametwo.common.model.primary.User;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 

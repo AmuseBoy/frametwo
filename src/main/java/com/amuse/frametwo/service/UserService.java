@@ -1,6 +1,6 @@
 package com.amuse.frametwo.service;
 
-import com.amuse.frametwo.common.model.User;
+import com.amuse.frametwo.common.model.primary.User;
 
 /**
  * @ClassName UserService
@@ -13,4 +13,6 @@ import com.amuse.frametwo.common.model.User;
 public interface UserService {
 
     User getUser(String id);
+
+    User findUser(String id);
 }
