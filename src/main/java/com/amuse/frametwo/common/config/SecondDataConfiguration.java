@@ -55,7 +55,12 @@ public class SecondDataConfiguration {
         return new JdbcTemplate(dataSource);
     }
 
-
+    /**
+     * EntityManager例子
+     * @param builder
+     * @param dataSource
+     * @return
+     */
     @Bean(name = "secondEntityManagerFactory")
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(
             EntityManagerFactoryBuilder builder,DataSource dataSource) {

@@ -23,6 +23,8 @@ spring:
       ddl-auto: none  #自动建表或更新表
     show-sql: true
     database: oracle
+    properties:
+      hibernate.current_session_context_class: org.springframework.orm.hibernate4.SpringSessionContext
     #properties: #此处可配置hibernate的各种属性
 
 second:

@@ -59,7 +59,12 @@ public class PrimaryDataConfiguration {
         return new JdbcTemplate(dataSource);
     }
 
-
+    /**
+     * EntityManager例子,EntityManager是jpa实现的接口
+     * @param builder
+     * @param dataSource
+     * @return
+     */
     @Primary
     @Bean(name = "primaryEntityManagerFactory")
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(

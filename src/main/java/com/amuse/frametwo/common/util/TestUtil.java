@@ -16,5 +16,6 @@ public class TestUtil {
         //System.out.println(UUID.randomUUID().toString());
         PasswordEncoder encoder = new BCryptPasswordEncoder();
         System.out.println(encoder.encode("123456"));
+
     }
 }
