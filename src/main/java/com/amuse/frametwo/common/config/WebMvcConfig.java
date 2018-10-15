@@ -16,6 +16,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 //@EnableWebMvc  //会开启一些ViewResolver默认配置
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
+
+
     //和controller作用一样
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {

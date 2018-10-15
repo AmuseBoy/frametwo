@@ -2,6 +2,12 @@ package com.amuse.frametwo.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @ClassName AccessController
@@ -63,6 +69,14 @@ public class AccessController {
         return "redirect:/index.html";
     }
 
+    //返回字符串
+    @RequestMapping(value = "/resString")
+    @ResponseBody //加上他返回字符串,不加就会跳转页面
+    public String resString(){
+        return "abcdefg";
+    }
+
+
     /**
      * 登陆跳转处理
      * @return
@@ -71,5 +85,15 @@ public class AccessController {
 //    public String login(){
 //        return "login";
 //    }
+
+    @RequestMapping(value = "/resJson",method = RequestMethod.GET)
+    @ResponseBody
+    public Map resJson(@RequestParam String personName){
+        Map<String,Object> map = new HashMap<>();
+        map.put("name",personName);
+        map.put("age",21);
+        map.put("address","beijing");
+        return map;
+    }
 
 }
